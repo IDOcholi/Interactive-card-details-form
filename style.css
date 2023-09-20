@@ -1,0 +1,436 @@
+@import url('https://fonts.google.com/specimen/Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --Red: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+color: var(--Dark-grayish-violet);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+ 
+main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    height: 240px;
+    
+}
+
+::placeholder{
+    opacity: 0.3;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    color: var(--Very-dark-violet);
+}
+
+picture{
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+}
+
+.card-front{
+    background: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 7rem;
+    left: 10%;
+    padding: 1.3rem;
+}
+
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+.card-back{
+    background: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 25rem;
+    right: 42%;
+}
+
+.card-front,
+.card-back{
+    position: absolute;
+    height: 100%;
+    width: 450px;
+    z-index: 100;
+    text-transform: uppercase;
+}
+
+
+.card-number{
+    position: absolute;
+    color: var(--White);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    bottom: 85px;
+    left: 20px;
+    width: 350px;
+}
+
+.card-name{
+    position: absolute;
+    color: var(--White);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    bottom: 35px;
+    left: 20px;
+}
+
+.card-exp{
+    position: absolute;
+    color: var(--White);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    right: 40px;
+    bottom: 35px;
+}
+
+.card-cvv{
+    position: absolute;
+    color: var(--White);
+    top: 105px;
+    right: 50px;
+    letter-spacing: 1px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 575px;
+    width: 100%;
+    margin-left: 200px;
+    margin-top: 400px;
+}
+  
+form {
+    width: 100%;
+    padding: 0 100px;
+
+}
+  
+.name {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+  
+.number {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    
+}
+  
+label {
+    margin-bottom: 5px;
+    line-height: 2;
+}
+  
+input {
+    height: 40px;
+    border-radius: 13px;
+    padding-left: 10px;
+    border: 2px solid var(--Light-grayish-violet);
+}
+  
+.date-section {
+    display: flex;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+  
+.date-container {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+  
+.date-container label {
+    letter-spacing: 2px;
+}
+  
+.month-year-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+}
+  
+.dates input {
+    width: 45%;
+}
+  
+.year {
+    margin-left: 10px;
+}
+  
+.cvc-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+  
+.btn {
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    box-shadow: 0 5px 5px var(--Light-grayish-violet);
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 13px;
+    border: none;
+    cursor: pointer;
+}
+  
+.name-error,
+.number-error,
+.date-error,
+.cvc-error{
+    font-size: 10px;
+    color: var(--Red);
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.success{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    max-width: 575px;
+    margin-top: 400px;
+
+}
+
+.success img{
+    width: 50%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.success h1{
+    color: var(--Very-dark-violet);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.success p{
+    color: var(--Dark-grayish-violet);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.error,
+.error-invalid{
+    color: var(--Red);
+    display: none;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: none;
+    margin-bottom: 15px;
+    margin-top: 10px;
+
+}
+
+footer{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin-top: 680px;
+}
+
+.attribution {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--Dark-grayish-violet);
+    color: var(--Very-dark-violet);
+    font-weight: bold;
+    padding-block: 12px;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a{
+    color: var(--Very-dark-violet);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 640px) {
+
+    body{
+        align-items: center;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        max-width: 375px;
+    }
+
+    picture {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .main-img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-front{
+        top: 6.8rem;
+        left: 1rem;
+        width: 80%;
+        height: 25%;
+    }
+
+    .card-number{
+        font-size: 1rem;
+        top: 5rem;
+    }
+
+
+    .card-name,
+    .card-exp{
+        font-size: 0.8rem;
+        top: 7rem;
+    }
+
+    .card-back{
+       top: 1rem;
+       left: 3.5rem;
+       width: 80%;
+       height: 25%;
+    }
+
+    .name {
+        width: 80%;
+    }
+      
+    .number {
+        width: 80%;
+        
+    }
+
+    .card-cvv{
+        top: 4rem;
+        font-size: 1rem;
+    }
+    .cvc-container {
+        width: 40%;
+    }
+
+    .date-container {
+        width: 80%;
+    }
+      
+    .month-year-container {
+        width: 80%;
+    }
+
+    .card-info{
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+        margin-left: 40px;
+        max-width: 375px;
+    }
+
+    .btn {
+        width: 80%;
+        height: 50px;
+        margin-left: 15px;
+        max-width: 375px;
+    }
+      
+    .success{
+        display: none;
+        max-width: 375px;
+        margin-top: 100px;
+    }
+
+    .success h1{
+        font-size: 1.3rem;
+    }
+
+    .success img{
+        width: 50%;
+        height: 40%;
+    }
+
+    .success p{
+        font-size: 0.6rem;
+    }
+
+    footer{
+       margin-top: 80px;
+       width: 100%;
+    }
+
+    .attribution{
+        font-size: 0.8rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
